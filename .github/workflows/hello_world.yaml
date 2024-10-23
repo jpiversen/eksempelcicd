@@ -13,7 +13,7 @@ jobs:
         run: echo Hello world!
 
       - name: Last ned koden
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
       - name: List opp filer i repoet
         run: ls -l
