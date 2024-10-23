@@ -1,0 +1,14 @@
+
+on: push
+
+name: hello_world.yaml
+
+permissions: read-all
+
+jobs:
+  hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add lintr options
+        run: |
+          echo Hello world!
