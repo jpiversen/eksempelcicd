@@ -10,5 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print hello world
-        run: |
-          echo Hello world!
+        run: echo Hello world!
+
+      - name: Last ned koden
+        uses: action/checkout@v4
+
+      - name: List opp filer i repoet
+        run: ls -l
