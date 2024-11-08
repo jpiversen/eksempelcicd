@@ -7,11 +7,14 @@ permissions: read-all
 
 jobs:
   hello-world:
-    runs-on: ubuntu-latest
+    # runs-on: ubuntu-latest
     container: rocker/tidyverse
     steps:
       - name: Print hello world
         run: echo Hello world!
+
+      - name: check docker
+        run: docker --version
 
       - name: Last ned koden
         uses: actions/checkout@v4
