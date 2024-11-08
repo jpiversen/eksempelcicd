@@ -7,8 +7,8 @@ permissions: read-all
 
 jobs:
   hello-world:
-    # runs-on: ubuntu-latest
-    container: rocker/tidyverse
+    runs-on: ubuntu-latest
+    # container: rocker/tidyverse
     steps:
       - name: Print hello world
         run: echo Hello world!
