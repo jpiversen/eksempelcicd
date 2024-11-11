@@ -17,4 +17,5 @@ Eksempelfunksjon
 }
 \examples{
 foo(2)
+foo(3)
 }
