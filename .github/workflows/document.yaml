@@ -4,9 +4,6 @@ on:
   push:
     branches: [main, master]
     paths: ["R/**"]
-  pull_request:
-    branches: [main, master]
-    paths: ["R/**"]
 
 name: document.yaml
 
