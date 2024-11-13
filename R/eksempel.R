@@ -9,8 +9,7 @@
 #'
 #' @examples
 #' foo(2)
+#' foo(3)
 foo <- function(x) {
-
   x^2
-
 }
