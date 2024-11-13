@@ -35,7 +35,11 @@ jobs:
             install_path = file.path(normalizePath(Sys.getenv("RUNNER_TEMP"), winslash = "/"), "package")
           )
           print(cov)
-          covr::report(cov, file = "test_coverage.html", browse = FALSE)
+          covr::report(
+            cov,
+            file = "coverage_report/test_coverage.html",
+            browse = FALSE
+          )
         shell: Rscript {0}
 
       - name: Show testthat output
@@ -50,4 +54,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          path: "test_coverage.html"
+          path: coverage_report/
