@@ -1,0 +1,45 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+
+versjon <- desc::desc_get_version()
+test_coverage <- covr::package_coverage() |> covr::percent_coverage()
+test_coverage_color <- dplyr::case_when(
+  test_coverage >= 90 ~ "brightgreen",
+  test_coverage >= 75 ~ "yellow", 
+  test_coverage < 75 ~ "red",
+  .default = "black"
+)
+
+```
+
+# eksempelcicd
+
+<!-- badges: start -->
+[![R-CMD-check.yaml](https://github.com/jpiversen/eksempelcicd/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jpiversen/eksempelcicd/actions/workflows/R-CMD-check.yaml)
+[![version](https://img.shields.io/badge/Versjon-`r versjon`-blue.svg)](commits/master)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![Test-coverage](https://img.shields.io/badge/Test%20coverage-`r test_coverage`%25-`r test_coverage_color`.svg)](/commits/master)
+[![Last-changedate](https://img.shields.io/badge/Sist%20oppdatert-`r format(Sys.Date(), "%d--%m--%Y")`-beige.svg)](/commits/master)
+<!-- badges: end -->
+
+Dette er et repo med eksempler på CI/CD for en R-pakke.
+
+## Installation
+
+You can install the development version of eksempelcicd from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("jpiversen/eksempelcicd")
+```
